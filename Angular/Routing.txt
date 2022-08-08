@@ -1,0 +1,7 @@
+Routing
+wildcard,default,redirectTo,RouteParam-observable&&
+snapshot
+optional parameter
+realative navigtion 
+
+

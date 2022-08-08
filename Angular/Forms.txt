@@ -1,0 +1,2 @@
+ we can submit the form using 
+ngSubmit directive or on the click event of the Submit button

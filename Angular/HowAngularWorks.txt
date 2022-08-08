@@ -1,0 +1,22 @@
+1.Angular.json
+-> defines the configuration and also contains the 
+entry point of the application i.e. Main.ts
+2.Main.ts
+-> It creates browser environment for the app and 
+also bootstraps the app.module.ts
+2.AppModule
+-> contains declaration of all the components and bootstraps
+the AppComponent
+3.AppComponent
+-> interacts with the webpage and serves data to it. Contains
+the selector,template url and styles.
+4.index.html
+-> It calls the root component i.e app-root contained in 
+appcomponent
+
+Every Angular application consists of components and templates which the browser cannot understand. Therefore, all the Angular applications need to be compiled first before running inside the browser.
+
+Angular provides two types of compilation:
+JIT(Just-in-Time) compilation
+AOT(Ahead-of-Time) compilation
+https://www.interviewbit.com/angular-interview-questions/?msclkid=2133975fa9d611eca897bd946082c8e5

@@ -1,0 +1,26 @@
+Nested Array 
+ student:any[]=[{
+    title:'jaggu',
+    id:2,
+    address:{
+      city:'BJP',
+      state:'KA'
+    }},
+    {
+      title:'svua',
+      id:1,
+      address:{
+        city:'KJP',
+        state:'AP'
+      }
+  }
+]
+
+console.log(this.student[0].address.city); BJP
+console.log(this.student[1].address.city);KJP
+
+In HTML
+<div *ngFor='let s of student'>
+<h1>{{s.address.city}}</h1>
+</div>
+<h2>{{student[0].address.city}}</h2>

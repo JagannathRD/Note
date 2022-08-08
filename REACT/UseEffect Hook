@@ -1,0 +1,60 @@
+HOOKS
+-->Special functions that allow us to add states and life cycle methods to functional components
+
+ useState hook
+Its purpose is to store the state in a functional component.
+
+import React, { useState } from 'react';
+
+function myAwesomeComponent () {
+  const [name, setName] = useState('John');
+  ...
+  
+}
+
+useEffect HOOK 
+--> In a React class, you would typically set up a subscription in componentDidMount, and clean it up in componentWillUnmount.
+
+--> With react hook useEffect we perform this by returning a function to clean up or unsubscribe the effect.
+
+
+ useEffect(() => {
+    PlacesAPI.subscribeToPlaceNews(props.place.id, handlePlacesNews);
+    return () => {
+      PlacesAPI.unsubscribeFromPlaceNews(props.place.id, handlePlacesNews);
+    };
+  });
+  
+ 
+--> you can make API calls by using useEffect and passing in an empty array or object as the second argument 
+	to have the same behavior as componentDidMount
+ 
+ const [todo, setTodo] = useState(null);
+  const [id, setId] = useState(1);
+  
+  useEffect(() => {
+    if (!id) {
+      return;
+    }
+    
+    fetch(`https://jsonplaceholder.typicode.com/todos/${id}`)
+      .then(results => results.json())
+      .then(data => {
+        setTodo(data);
+      });
+  }, [id]);  // Don't forget to add this!
+  
+  By passing a second parameter to useEffect we are setting a subscription whenever the id property change the effect will be retriggered
+
+ --> If instead, we would like to make an API call ONLY when the component is mounted
+ 
+ const [fullName, setFullName] = useState(null);
+
+useEffect(() => {
+  fetch('https://randomuser.me/api/')
+    .then(results => results.json())
+    .then(data => {
+      const {name} = data.results[0];
+      setFullName(`${name.first} ${name.last}`);
+    });
+}, []); // <-- Have to pass in [] here!

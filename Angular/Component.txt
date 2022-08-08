@@ -1,0 +1,14 @@
+Selector
+"app-test" as a custom html <app-test>
+".app-test" as a class <div class="app-test"></div>
+'[app-test]' as an attribute <div app-test></div>
+
+Single-Page Applications (SPAs) are Web apps that load a single HTML page and dynamically update that page as the user interacts with the app.
+
+Directives are instructions in the DOM. They specify how to place your components and business logic in the Angular.
+
+Component Directives: Component directives are used in main class. They contain the detail of how the component should be processed, instantiated and used at runtime.
+
+Structural Directives: Structural directives start with a * sign. These directives are used to manipulate and change the structure of the DOM elements. For example, *ngIf and *ngFor.
+
+Attribute Directives: Attribute directives are used to change the look and behavior of the DOM elements. For example: ngClass, ngStyle etc.
