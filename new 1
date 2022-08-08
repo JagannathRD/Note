@@ -1,6 +1,6 @@
 setting github proxy
 DJD1KOR@BMH1112645 MINGW64 /c/Users/DJD1KOR/material-demo (studentProject)
-$ git config --global http.proxy http://djd1kor:Jagannathrd06@rb-proxy-apac.bosch.com:8080
+$ git config --global http.proxy 
 
 P
 
